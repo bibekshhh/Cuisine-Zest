@@ -1,0 +1,37 @@
+.bg-primary {
+    background-color: #1266F1;
+}
+
+.bg-secondary {
+    background-color: #B23CFD;
+}
+
+.bg-info {
+    background-color: #39C0ED;
+}
+
+.bg-dark {
+    background-color: #262626;
+    color: white;
+}
+
+.bg-light {
+    background-color: #FBFBFB;
+    color: black;
+}
+
+.bg-danger {
+    background-color: #F93154;
+}
+
+.bg-success {
+    background-color: #00B74A;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-dark {
+    color: black;
+}

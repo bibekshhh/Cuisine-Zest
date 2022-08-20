@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Roboto:wght@100;300;400;500;700;900&family=Tinos&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul,
+li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.product-page .navbar {
+    box-shadow: 0 2.5px 5px #cccc !important;
+}
+
+.product-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.product-page-container .product-wrapper {
+    width: max-content;
+    padding: 0 20%;
+    /* background-color: aliceblue !important; */
+}
+
+@media all and (max-width: 1400px) {
+    .product-page-container .product-wrapper,
+    .product-deatils-container {
+        padding: 0 10% !important;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .carousel-container,
+    .wrapper-carousel,
+    .carousel,
+    .carousel-indicators {
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .header {
+        width: 100% !important;
+    }
+    .available-location .available-restaurant {
+        justify-content: center !important;
+    }
+    .product-wrapper .product-layer-1 .carousel-container {
+        margin: 0 !important;
+    }
+    .review-container {
+        padding: 70px 2% !important;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .product-page-container .product-wrapper,
+    .product-deatils-container {
+        padding: 0 15px !important;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .product-deatils-container .ingridient {
+        flex-wrap: wrap !important;
+    }
+    .carousel img {
+        height: 200px !important;
+    }
+}
+
+
+/* ------------------------------ */
+
+.product-wrapper .header {
+    width: max-content;
+    margin: 0px 0 30px 0;
+}
+
+.product-wrapper .header .title {
+    display: block;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.product-wrapper .header .rating-info {
+    display: flex;
+    margin: 5px 0 10px 0;
+}
+
+.product-wrapper .header .review-info {
+    color: ;
+}
+
+.product-wrapper .header .review-info::before {
+    position: absolute;
+    bottom: 0px !important;
+}
+
+.product-wrapper .header .description {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+/* -------------------- */
+
+.product-wrapper .product-layer-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-wrapper .product-layer-1 .carousel-container {
+    width: max-content;
+    margin-right: 25px;
+}
+
+.product-wrapper .product-layer-1 .product-highlight {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    margin-top: 5px;
+    padding: 25px 30px;
+    background-color: #f3f7fa;
+    border: 1px solid #ebeff1;
+    border-radius: 2px;
+}
+
+.product-wrapper .product-layer-1 .product-highlight::before {
+    position: absolute;
+    content: "";
+    top: -25px;
+    right: -25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.product-wrapper .product-layer-1 .product-highlight a {
+    color: #B14100;
+    position: absolute;
+    top: -9px;
+    right: -5px;
+    font-size: 30px;
+}
+
+.product-wrapper .product-layer-1 .product-highlight p.heading {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-wrapper .product-layer-1 .product-highlight ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.product-wrapper .product-layer-1 .product-highlight ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.product-wrapper .product-layer-1 .product-highlight ul li span {
+    width: max-content;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.product-wrapper .product-layer-1 .secondary-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-wrapper .product-layer-1 .secondary-container .share-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.product-wrapper .product-layer-1 .secondary-container .share-links div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+    background-color: white;
+    border: 2px solid #dddd;
+    border-radius: 5px;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.product-wrapper .product-layer-1 .secondary-container .share-links div:hover {
+    opacity: 0.7;
+}
+
+.product-layer-1 .secondary-container .share-links div.instagram {
+    border: 2px solid #F56040;
+    color: #F56040;
+}
+
+.product-layer-1 .secondary-container .share-links div.twitter {
+    border: 2px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+.product-layer-1 .secondary-container .share-links div.whatsapp {
+    border: 2px solid #25D366;
+    color: #25D366;
+}
+
+
+/* ------------------------------ */
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
+
+.carousel {
+    width: 600px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 350px;
+    margin: 0;
+}
+
+.carousel-indicators {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative !important;
+    display: flex;
+    justify-content: flex-start !important;
+    padding: 0;
+    margin: 10px 0 0 0 !important;
+}
+
+.carousel-indicators .add-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 90px;
+    background: rgb(245 248 250);
+    border: 2px solid #dddd;
+    border-radius: 2px;
+    margin-right: 5px;
+    cursor: pointer !important;
+}
+
+.carousel-indicators .add-image:hover {
+    opacity: 0.8;
+}
+
+.carousel-indicators .add-image span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #B14100;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.carousel-indicators .add-image span i {
+    font-size: 20px;
+}
+
+.carousel-indicators .add-image span input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    z-index: 9999;
+    cursor: pointer !important;
+}
+
+.carousel-indicators img {
+    width: 110px !important;
+    height: 90px !important;
+    border: 1px solid #cccc;
+    border-radius: 2px;
+    margin: 0 0 20px 0;
+}
+
+.carousel-indicators img:hover {
+    opacity: 0.9;
+}
+
+.carousel-indicators [data-bs-target] {
+    border: none !important;
+}
+
+
+/* ------------------------------ */
+
+.product-deatils-container {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.available-location {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    overflow-y: hidden;
+    height: max-content;
+    padding: 30px 0 70px 0;
+    /* background-color: #ebf3ff; */
+}
+
+.available-location .available-restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.available-location .available-restaurant .restaurant {
+    width: 250px;
+    height: max-content;
+    margin-right: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #dddd;
+    background-color: white;
+    cursor: pointer;
+}
+
+.available-restaurant .restaurant .image img {
+    width: 100%;
+    height: 170px;
+}
+
+.available-restaurant .restaurant .description {
+    font-size: 15px;
+    padding: 7px 12px;
+}
+
+.available-restaurant .restaurant .description .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.available-restaurant .restaurant .description .time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.available-restaurant .restaurant .description .time p {
+    margin: 0 0 0 5px!important;
+}
+
+.available-restaurant .restaurant .description .distance {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.available-restaurant .restaurant .description .pricing span:first-child {
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #B14100;
+}
+
+.available-restaurant .restaurant .description .pricing p.price {
+    margin: 0 !important;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    color: #B14100;
+}
+
+.available-restaurant .restaurant .description .pricing p.price-comment {
+    margin: 0 !important;
+    font-size: 13px;
+    font-weight: 300;
+    color: #B14100;
+}
+
+.available-restaurant .restaurant .redirect-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.available-restaurant .restaurant .redirect-div button {
+    width: 93%;
+    height: 40px;
+    color: #32b100;
+    border: 2px solid #32b100;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.available-restaurant .restaurant .redirect-div button:hover {
+    opacity: 0.7;
+}
+
+
+/* ----------------------------------------- */
+
+.product-deatils-container .ingridient {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+    margin: 20px 0;
+    /* background-color: #ebeff1; */
+}
+
+.product-deatils-container .ingridient ul.ingridient-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none;
+}
+
+.product-deatils-container .ingridient ul.ingridient-list li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 15px !important;
+    background-color: #ebeff1;
+    margin: 10px 10px !important;
+}
+
+.product-deatils-container .ingridient ul.ingridient-list li input {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+
+/* --------------------------------- */
+
+.review-container {
+    width: 100%;
+    height: max-content;
+    padding: 20px 20% 70px 20%;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+}
+
+.review-container .review-wrapper {
+    width: 100%;
+    padding: 20px 25px 30px 25px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #eeee;
+    background-color: white;
+}
+
+.review-wrapper .review-list {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.review-container .review-wrapper .sorting {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f5f5;
+}
+
+.review-container .review-wrapper .sorting p {
+    height: 100%;
+    margin: 0px 0 0 10px;
+}
+
+.review-container .review-wrapper .sorting .button .dropdown button {
+    width: 100% !important;
+    height: 50px;
+    margin: 0 !important;
+    border-left: 1px solid rgba(226, 226, 226, 0.8);
+    padding: 0 25px;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.review-wrapper .review-list .review {
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccc;
+}
+
+.review-wrapper .review-list .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-wrapper .review-list .description .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 30px;
+    border: 1px solid #cccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+    background-color: #268500;
+}
+
+.review-wrapper .review-list .description .rating i {
+    margin-left: 5px;
+}
+
+.review-wrapper .review-list .description .caption {
+    font-size: 15px;
+    margin: 7px 0 10px 0;
+}
+
+.review-wrapper .review-list .images {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.review-wrapper .review-list .images img {
+    width: 150px;
+    height: 100px;
+    padding: 1px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: #cccc;
+}
+
+.review-wrapper .review-list .user {
+    margin-top: 10px;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.review-wrapper .review-list .user .name {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.review-wrapper .review-list .user .name::after {
+    position: absolute;
+    content: "·";
+    width: 10px;
+    height: 10px;
+    top: 0;
+    bottom: 0;
+    right: -22.5px;
+    color: rgba(116, 116, 116, 0.8);
+}
+
+.review-wrapper .review-list .user .date {
+    font-size: 13px;
+}
+
+.review-wrapper .add-review {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: max-content;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #dddd;
+    background-color: #f8f9fa;
+}
+
+.review-wrapper .add-review .user-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 10px;
+    color: #B14100;
+    background-color: white;
+    padding: 2px;
+    border: 1px solid #B14100;
+    border-radius: 50%;
+}
+
+.review-wrapper .add-review .form {
+    width: 100%;
+    padding: 10px 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-wrapper .add-review textarea {
+    position: relative;
+    width: 90%;
+    height: 90px;
+    border: 1px solid #cccc;
+    border-radius: 2px;
+    font-size: 17px;
+    padding: 7px 10px;
+    margin-left: 10px;
+}
+
+.review-wrapper .add-review textarea:hover {
+    border: 1px solid rgb(167, 167, 167);
+}
+
+.review-wrapper .add-review button {
+    width: max-content;
+    padding: 7px 25px;
+    margin: 10px 0 0 10px;
+    color: white;
+    border: 1px solid #cccc;
+    border-radius: 3px;
+    background-color: rgb(52, 160, 9);
+}

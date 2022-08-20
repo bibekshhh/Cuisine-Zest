@@ -1,0 +1,187 @@
+.banner-wrapper {
+    width: 100%;
+    height: max-content;
+}
+
+.banner-wrapper .banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner-wrapper .banner,
+.banner-wrapper .banner img {
+    width: 100%;
+    height: 60vh;
+}
+
+.banner-wrapper .banner-bg {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -9;
+}
+
+.banner-wrapper .banner-bg::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 60vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.banner-wrapper .banner:hover .food-animation img {
+    transform: scale(1.05) translate(0%, -50%);
+}
+
+.banner-wrapper .banner .food-animation img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    width: 270px;
+    height: 270px;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-wrapper .banner .food-animation img.momo,
+.banner-wrapper .banner .food-animation img.selroti {
+    width: 170px;
+    height: 170px;
+    margin-left: 280px;
+    margin-top: -110px;
+}
+
+.banner-wrapper .banner .food-animation img.selroti {
+    width: 150px;
+    height: 150px;
+    margin-top: 110px;
+}
+
+.banner-description,
+.banner .signup-form {
+    width: 30%;
+    height: 50%;
+    margin-left: 20%;
+    padding-top: 15px;
+}
+
+.banner-description * {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner-description .heading {
+    color: rgb(207, 207, 207) !important;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.banner-description .title {
+    margin-top: 5px;
+    font-size: 55px;
+    font-weight: 700;
+    width: max-content;
+    background-color: #262626;
+}
+
+.banner-description .caption {
+    color: rgb(146, 146, 146) !important;
+    margin-top: 0px;
+    font-size: 15px;
+}
+
+.banner .signup-form input {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    width: 80%;
+    min-width: 250px;
+    height: 50px;
+    font-size: 15px;
+    background-color: white;
+    text-indent: 15px;
+    border: 2px solid white;
+}
+
+.banner .signup-form button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 15px 0 0 3px;
+    display: block;
+    width: 30%;
+    text-align: center;
+    height: 45px;
+    background-color: white;
+    border: 3px solid #B14100;
+    outline: 3px solid white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer !important;
+}
+
+.banner .signup-form button:hover {
+    margin-bottom: -5px;
+}
+
+@media all and (max-width: 900px) {
+    .banner-wrapper .banner .food-animation img {
+        width: 170px;
+        height: 170px;
+    }
+    .banner-wrapper .banner .food-animation img.momo,
+    .banner-wrapper .banner .food-animation img.selroti {
+        width: 120px;
+        height: 120px;
+        margin-left: 27%;
+    }
+    .banner .signup-form input {
+        width: 270px;
+    }
+    .banner .signup-form button {
+        width: 120px;
+    }
+    .banner-description,
+    .banner .signup-form {
+        margin-left: 5% !important;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .banner-description {
+        height: max-content;
+    }
+    .banner-wrapper .banner-bg,
+    .banner-wrapper .banner-bg::before,
+    .banner-wrapper .banner-bg img {
+        height: 45vh;
+    }
+    .banner-wrapper .banner .food-animation,
+    .banner-wrapper .banner .food-animation img {
+        display: none;
+    }
+    .banner-description .title {
+        font-size: 35px;
+    }
+    .banner-description .heading {
+        width: max-content;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .banner-description .caption {
+        font-size: 12px;
+    }
+    .banner .signup-form {
+        margin-top: 50px;
+        width: 75%;
+        height: max-content;
+    }
+    .banner .signup-form input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/boot.css">
+    <link rel="stylesheet" href="style/color.css">
+    <link rel="stylesheet" href="style/dropdown.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="login-page">
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .login-page .navbar {
+            box-shadow: 0 2.5px 5px #cccc !important;
+        }
+        
+        div.login-form-main-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 80vh;
+            margin-top: 120px;
+            background-color: rgb(245, 245, 245);
+        }
+        
+        h3.org-name {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+        
+        .hr-container {
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        hr {
+            margin: 15px 0 !important;
+            border: 0;
+            height: 1px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        hr.or-hr::before {
+            content: "OR";
+            position: absolute;
+            width: 50px;
+            background-color: white;
+            color: rgb(158, 158, 158);
+            top: 50%;
+            left: calc(50% - 25px);
+            text-align: center;
+            top: 7.5px;
+        }
+        
+        div.login-form-main-wrapper .img-container {
+            background-color: transparent !important;
+            width: 30%;
+            min-width: 400px;
+        }
+        
+        div.login-form-main-wrapper .login-form-container {
+            width: 30%;
+            min-width: 300px;
+            height: max-content !important;
+            background-color: transparent !important;
+        }
+        
+        div.login-form-main-wrapper .login-form-container .login-form,
+        div.login-form-main-wrapper .login-form-container .signup-div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 25px;
+            border: 1px solid #dddd;
+            background-color: white;
+        }
+        
+        div.login-form-main-wrapper .login-form-container .signup-div {
+            align-items: center;
+            margin-top: 15px;
+            padding: 15px;
+        }
+        
+        div.login-form-main-wrapper .login-form-container .login-form input {
+            width: 100%;
+            height: 37px;
+            margin-bottom: 12px;
+            padding: 2px;
+            border: 1px solid #dddd;
+            border-radius: 2px;
+            outline: none;
+            font-size: 16px;
+            text-indent: 15px;
+            background-color: rgb(248, 248, 248);
+        }
+        
+        div.login-form-main-wrapper .login-form-container .login-form input::placeholder {
+            font-size: 12px !important;
+        }
+        
+        div.login-form-main-wrapper .login-form-container .login-form input:focus {
+            border: 1px solid gray;
+        }
+        
+        div.login-form-main-wrapper .img-container,
+        div.login-form-main-wrapper .login-form-container {
+            height: 70%;
+            margin: 20px;
+            position: relative;
+            background-color: white;
+        }
+        
+        div.login-form-main-wrapper .img-container img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        button.submit-btn {
+            color: white !important;
+            background-color: #00ad46 !important;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            height: 40px;
+            margin-top: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+        
+        button.submit-btn:hover {
+            background-color: #019e40 !important;
+        }
+        
+        .login-form a,
+        .signup-div a {
+            text-decoration: none;
+            color: #018f1f !important;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        a.forgot-password {
+            font-size: 14px;
+            color: rgb(90, 90, 90) !important;
+        }
+        
+        @media only screen and (max-width: 900px) {
+            div.login-form-main-wrapper .login-form-container {
+                margin: 0;
+                width: 90%;
+                min-width: 300px;
+            }
+            div.login-form-main-wrapper .img-container {
+                display: none;
+            }
+        }
+    </style>
+
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="nav-menus">
+                <div class="brand-logo ml-3">Κουζίnες</div>
+            </div>
+            <div class="nav-menus">
+                <div class="account-dropdown dropdown">
+                    <button class="dropbtn bg-light" style="color: black;">Account</button>
+                    <div class="dropdown-content">
+                        <label for="">Account</label>
+                        <a href="https://www.shyamshah.info.np/login.html">Join Now</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Help</a>
+                        <label for="">More</label>
+                        <a href="#">Blogs</a>
+                        <a href="#">Ask the Community</a>
+                    </div>
+                </div>
+
+                <div class="login-btn ml-3" id="login-redirect-btn">Login</div>
+                <div class="myFavourites">
+                    <i class="far fa-shopping-cart"></i>
+                    <p class="no_of_itmes_navbar">0</p>
+                </div>
+            </div>
+
+            <div class="nav-menus">
+                <div class="social-icons">
+                    <div class="icon"><i class="bi bi-facebook"></i></div>
+                    <div class="icon"><i class="bi bi-instagram"></i></div>
+                    <div class="icon"><i class="bi bi-twitter"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-form-main-wrapper">
+        <div class="img-container">
+            <img src="https://svgur.com/i/fbw.svg" alt="login art">
+        </div>
+        <div class="login-form-container">
+            <div class="login-form">
+                <h3 class="org-name">Κουζίnες</h3>
+                <input type="text" class="input-email" placeholder="Phone number, user or email">
+                <input type="password" class="input-password" placeholder="Password">
+                <button type="submit" class=" submit-btn">Login</button>
+                <div class="hr-container">
+                    <hr class="or-hr" data-content="OR">
+
+                </div>
+
+                <button type="submit" class="submit-btn fb"><i class="bi bi-facebook"></i> Login with Facebook</button>
+
+
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+            <div class="signup-div">
+                <p>Don't have account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-distributed">
+        <div class="footer-inside">
+            <div class="footer-center">
+                <div class="footer-center-wrapper">
+                    <div><span>Policy</span>
+                        <ul>
+                            <li>Home</li>
+                            <li>Blog</li>
+                            <li>Location</li>
+                            <li>About</li>
+                            <li>FAQs</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div><span>Policy</span>
+                        <ul>
+                            <li>Return Policy</li>
+                            <li>Terms Of use</li>
+                            <li>Security</li>
+                            <li>Privacy</li>
+                            <li>Sitemap</li>
+                        </ul>
+                    </div>
+                    <div><span>Quick Links</span>
+                        <ul>
+                            <li>Home</li>
+                            <li>Product</li>
+                            <li>Login</li>
+                            <li>Newsletter</li>
+                            <li>Signup</li>
+                            <li>Review</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span> Kouzines is a interactive-cuisines-listing based platform. It started providing it's free service since 2018 AD. It was officially created by startup-minded and aspiring young youths. People on this platform
+                    can easily add, review and share the unique foods publicly on the product page.
+                </p>
+                <div class="footer-icons">
+                    <a href="#" data-toggle="tooltip" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Github"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div>
+                <button data-toggle="tooltip" title="Location"><i class="bi bi-geo-alt"></i></button>
+                <p><span>Thapathali</span> Kathmandu, Nepal</p>
+            </div>
+            <div>
+                <button data-toggle="tooltip" title="Contact"><i class="bi bi-telephone"></i></button>
+                <p>+977 9125485884</p>
+            </div>
+            <div>
+                <button data-toggle="tooltip" title="E-mail"><i class="bi bi-envelope"></i></button>
+                <p><a href="mailto:support@company.com">contact@Kouzines.com</a></p>
+            </div>
+            <div>
+                <p class="footer-company-name">Kouzines &copy; 2022</p>
+            </div>
+            <div class="payment-method">
+                <img src="assets/paymentMethod.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2" async></script>
+<script>
+    document.querySelector('.login-page .brand-logo').onclick = () => {
+        window.location.assign("https://www.shyamshah.info.np");
+    }
+</script>
+
+</html>

@@ -1,0 +1,104 @@
+.dropbtn {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    perspective: 1000px;
+    position: relative;
+    width: max-content;
+    padding: 10px 0;
+    margin-top: -50px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown-content label {
+    font-size: 13px;
+    line-height: 4vh;
+    margin: 25px 20px!important;
+    color: rgb(131, 131, 131);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dropdown-content label.product-page-label {
+    line-height: none;
+    margin: 0px 0 0 15px!important;
+}
+
+.dropdown-content button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.login-page .dropdown-content a {
+    width: calc(100% - 60px) !important;
+}
+
+.dropdown-content a,
+.dropdown-content button {
+    width: 100%;
+    color: rgb(58, 58, 58);
+    font-size: 14px;
+    padding: 11px 30px 11px 30px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+    background-color: #f1f1f1 !important;
+    color: #8A5920;
+}
+
+.dropdown-content button:active {
+    border: 0px !important;
+}
+
+.dropdown:hover .dropdown-content {
+    margin-top: 0px;
+    display: block;
+    border-bottom: 3px solid green;
+    z-index: 999999;
+    animation: dropdown 0.4s ease-in-out;
+}
+
+@keyframes dropdown {
+    0% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.review-container .review-wrapper .sorting .button .dropdown:hover .dropdown-content {
+    animation: sorting-dropdown 0.4s ease-in-out forwards;
+}
+
+@keyframes sorting-dropdown {
+    0% {
+        margin-top: 10px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
